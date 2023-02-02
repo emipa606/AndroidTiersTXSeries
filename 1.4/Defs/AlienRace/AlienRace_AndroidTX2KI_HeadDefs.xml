@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>TX2KI_Female_Average_Normal</defName>
+    <graphicPath>Things/Misc/Androids/Models/TX2KI/head/Female_Average_Normal</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>TX2KI_Male_Average_Normal</defName>
+    <graphicPath>Things/Misc/Androids/Models/TX2KI/head/Male_Average_Normal</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+</Defs>

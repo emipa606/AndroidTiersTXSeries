@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>TX3_Female_Average_Normal</defName>
+    <graphicPath>Things/Misc/Androids/Models/TX3/head/Female_Average_Normal</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>TX3_Female_Average_Hurted</defName>
+    <graphicPath>Things/Misc/Androids/Models/TX3/head/Female_Average_Hurted</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>TX3_Female_Average_Hurted2</defName>
+    <graphicPath>Things/Misc/Androids/Models/TX3/head/Female_Average_Hurted2</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>TX3_Male_Average_Normal</defName>
+    <graphicPath>Things/Misc/Androids/Models/TX3/head/Male_Average_Normal</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>TX3_Male_Average_Hurted</defName>
+    <graphicPath>Things/Misc/Androids/Models/TX3/head/Male_Average_Hurted</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>TX3_Male_Average_Hurted2</defName>
+    <graphicPath>Things/Misc/Androids/Models/TX3/head/Male_Average_Hurted2</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+</Defs>

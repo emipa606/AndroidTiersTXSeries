@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef Name="ATPP_BaseCreateTX2KI" Abstract="True">
+    <description>Create a blank TX2KI Android from Plasteel.</description>
+    <jobString>Making Android</jobString>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>350</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ATR_T2Androids</researchPrerequisite>
+    <workAmount>27500</workAmount>
+    <unfinishedThingDef>ATR_UnfinishedAndroid</unfinishedThingDef>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Repair</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workSpeedStat>ATR_MechanicalOperationSpeed</workSpeedStat>
+    <recipeUsers>
+      <li>ATR_MechanicalAssemblyPod</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef ParentName="ATPP_BaseCreateTX2KI">
+    <defName>ATPP_CreateTX2KIAndroid</defName>
+    <label>Create TX2KI Android</label>
+    <products>
+      <ATPP_TX2KIAndroidGeneratorAI>1</ATPP_TX2KIAndroidGeneratorAI>
+    </products>
+  </RecipeDef>
+  <ThingDef ParentName="ATR_GeneratorBase">
+    <defName>ATPP_TX2KIAndroidGeneratorAI</defName>
+    <label>TX2KI Android</label>
+    <comps>
+      <li Class="ATReforged.CompProperties_GenericSpawner">
+        <pawnKind>ATPP_Android2KITXKind</pawnKind>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

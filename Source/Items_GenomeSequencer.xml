@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ATR_GeneratorBase">
+    <defName>ATPP_GSGeneratorTX2K</defName>
+    <label>Inactived TX2K</label>
+    <comps>
+      <li Class="ATReforged.CompProperties_GenericSpawner">
+        <pawnKind>ATPP_Android2KTXKind</pawnKind>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ATR_GeneratorBase">
+    <defName>ATPP_GSGeneratorTX3</defName>
+    <label>Inactived TX3</label>
+    <comps>
+      <li Class="ATReforged.CompProperties_GenericSpawner">
+        <pawnKind>ATPP_Android3TXKind</pawnKind>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ATR_GeneratorBase">
+    <defName>ATPP_GSGeneratorTX4</defName>
+    <label>Inactived TX4</label>
+    <comps>
+      <li Class="ATReforged.CompProperties_GenericSpawner">
+        <pawnKind>ATPP_Android4TXKind</pawnKind>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

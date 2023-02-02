@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef Name="ATPP_BaseCreateTX3I" Abstract="True">
+    <description>Create a TX3I Android.</description>
+    <jobString>Making Android</jobString>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>70</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ATR_T3Androids</researchPrerequisite>
+    <workAmount>26500</workAmount>
+    <unfinishedThingDef>ATR_UnfinishedAndroid</unfinishedThingDef>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Repair</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workSpeedStat>ATR_MechanicalOperationSpeed</workSpeedStat>
+    <recipeUsers>
+      <li>ATR_MechanicalAssemblyPod</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef ParentName="ATPP_BaseCreateTX3I">
+    <defName>ATPP_CreateTX3IAndroid</defName>
+    <label>Create TX3I Android</label>
+    <products>
+      <ATPP_TX3IAndroidGeneratorAI>1</ATPP_TX3IAndroidGeneratorAI>
+    </products>
+  </RecipeDef>
+  <ThingDef ParentName="ATR_GeneratorBase">
+    <defName>ATPP_TX3IAndroidGeneratorAI</defName>
+    <label>TX3I Android</label>
+    <comps>
+      <li Class="ATReforged.CompProperties_GenericSpawner">
+        <pawnKind>ATPP_Android3ITXKind</pawnKind>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

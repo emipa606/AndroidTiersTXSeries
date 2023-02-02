@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef Name="ATPP_BaseCreateTX4" Abstract="True">
+    <description>Create a TX4 Android.</description>
+    <jobString>Making Android</jobString>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <skillRequirements>
+      <Crafting>14</Crafting>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>150</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>90</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AIPersonaCore</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Meat_Human</li>
+          </thingDefs>
+        </filter>
+        <count>175</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MedicineIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ATR_T4Androids</researchPrerequisite>
+    <workAmount>32000</workAmount>
+    <unfinishedThingDef>ATR_UnfinishedAndroid</unfinishedThingDef>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Repair</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workSpeedStat>ATR_MechanicalOperationSpeed</workSpeedStat>
+    <recipeUsers>
+      <li>ATR_MechanicalAssemblyPod</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef ParentName="ATPP_BaseCreateTX4">
+    <defName>ATPP_CreateTX4Android</defName>
+    <label>Create TX4 Android</label>
+    <products>
+      <ATPP_TX4AndroidGeneratorAI>1</ATPP_TX4AndroidGeneratorAI>
+    </products>
+  </RecipeDef>
+  <ThingDef ParentName="ATR_GeneratorBase">
+    <defName>ATPP_TX4AndroidGeneratorAI</defName>
+    <label>TX4 Android</label>
+    <comps>
+      <li Class="ATReforged.CompProperties_GenericSpawner">
+        <pawnKind>ATPP_Android4TXKind</pawnKind>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

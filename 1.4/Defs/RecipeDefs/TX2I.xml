@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef Abstract="true" Name="ATPP_BaseCreateTX2I">
+    <description>Create a blank TX2I Android from Plasteel.</description>
+    <jobString>Making Android</jobString>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>80</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <researchPrerequisite>ATR_T2Androids</researchPrerequisite>
+    <workAmount>22500</workAmount>
+    <unfinishedThingDef>ATR_UnfinishedAndroid</unfinishedThingDef>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Repair</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workSpeedStat>ATR_MechanicalOperationSpeed</workSpeedStat>
+    <recipeUsers>
+      <li>ATR_MechanicalAssemblyPod</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef ParentName="ATPP_BaseCreateTX2I">
+    <defName>ATPP_CreateTX2IAndroid</defName>
+    <label>Create TX2I Android</label>
+    <products>
+      <ATPP_TX2IAndroidGeneratorAI>1</ATPP_TX2IAndroidGeneratorAI>
+    </products>
+  </RecipeDef>
+  <ThingDef ParentName="ATR_GeneratorBase">
+    <defName>ATPP_TX2IAndroidGeneratorAI</defName>
+    <label>TX2I Android</label>
+    <comps>
+      <li Class="ATReforged.CompProperties_GenericSpawner">
+        <pawnKind>ATPP_Android2ITXKind</pawnKind>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <!-- <success>Always</success> -->
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName = "ATR_MechanicalMarauders"]/pawnGroupMakers/li[kindDef="Combat" and commonality="100"]/options</xpath>
+        <value>
+          <ATPP_AndroidTX2RaiderFactionSpecific>2</ATPP_AndroidTX2RaiderFactionSpecific>
+          <ATPP_AndroidTX2KIRaiderFactionSpecific>2</ATPP_AndroidTX2KIRaiderFactionSpecific>
+          <ATPP_AndroidTX3IRaiderFactionSpecific>1</ATPP_AndroidTX3IRaiderFactionSpecific>
+          <ATPP_AndroidTX4RaiderFactionSpecific>1</ATPP_AndroidTX4RaiderFactionSpecific>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName = "ATR_MechanicalMarauders"]/pawnGroupMakers/li[kindDef="Combat" and commonality="1"]/options</xpath>
+        <value>
+          <ATPP_AndroidTX2IRaiderFactionSpecific>6</ATPP_AndroidTX2IRaiderFactionSpecific>
+          <ATPP_AndroidTX2RaiderFactionSpecific>4</ATPP_AndroidTX2RaiderFactionSpecific>
+          <ATPP_AndroidTX2KIRaiderFactionSpecific>5</ATPP_AndroidTX2KIRaiderFactionSpecific>
+          <ATPP_AndroidTX4IRaiderFactionSpecific>1</ATPP_AndroidTX4IRaiderFactionSpecific>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName = "ATR_MechanicalMarauders"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+        <value>
+          <ATPP_AndroidTX2RaiderFactionSpecific>1</ATPP_AndroidTX2RaiderFactionSpecific>
+          <ATPP_AndroidTX2KIRaiderFactionSpecific>4</ATPP_AndroidTX2KIRaiderFactionSpecific>
+          <ATPP_AndroidTX3RaiderFactionSpecific>1</ATPP_AndroidTX3RaiderFactionSpecific>
+          <ATPP_AndroidTX3IRaiderFactionSpecific>2</ATPP_AndroidTX3IRaiderFactionSpecific>
+          <ATPP_AndroidTX4IRaiderFactionSpecific>4</ATPP_AndroidTX4IRaiderFactionSpecific>
+          <ATPP_AndroidTX4RaiderFactionSpecific>1</ATPP_AndroidTX4RaiderFactionSpecific>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName = "ATR_AndroidUnion"]/pawnGroupMakers/li[kindDef="Combat"]/options</xpath>
+        <value>
+          <ATPP_AndroidTX2CollectiveSoldier>2</ATPP_AndroidTX2CollectiveSoldier>
+          <ATPP_AndroidTX2ICollectiveSoldier>1</ATPP_AndroidTX2ICollectiveSoldier>
+          <ATPP_AndroidTX3ICollectiveSoldier>3</ATPP_AndroidTX3ICollectiveSoldier>
+          <ATPP_AndroidTX3CollectiveSoldier>1</ATPP_AndroidTX3CollectiveSoldier>
+          <ATPP_AndroidTX4ICollectiveSoldier>2</ATPP_AndroidTX4ICollectiveSoldier>
+          <ATPP_AndroidTX4CollectiveSoldier>1</ATPP_AndroidTX4CollectiveSoldier>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName = "ATR_AndroidUnion"]/pawnGroupMakers/li[kindDef="Peaceful"]/options</xpath>
+        <value>
+          <ATPP_AndroidTX2CollectiveSoldier>3</ATPP_AndroidTX2CollectiveSoldier>
+          <ATPP_AndroidTX3ICollectiveSoldier>3</ATPP_AndroidTX3ICollectiveSoldier>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName = "ATR_AndroidUnion"]/pawnGroupMakers/li[kindDef="Trader"]/guards</xpath>
+        <value>
+          <ATPP_AndroidTX2CollectiveSoldier>3</ATPP_AndroidTX2CollectiveSoldier>
+          <ATPP_AndroidTX3CollectiveSoldier>1</ATPP_AndroidTX3CollectiveSoldier>
+          <ATPP_AndroidTX3ICollectiveSoldier>2</ATPP_AndroidTX3ICollectiveSoldier>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/FactionDef[defName = "ATR_AndroidUnion"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+        <value>
+          <ATPP_AndroidTX2KICollectiveSoldier>3</ATPP_AndroidTX2KICollectiveSoldier>
+          <ATPP_AndroidTX4CollectiveSoldier>1</ATPP_AndroidTX4CollectiveSoldier>
+          <ATPP_AndroidTX4ICollectiveSoldier>2</ATPP_AndroidTX4ICollectiveSoldier>
+          <ATPP_AndroidTX2ICollectiveSoldier>1</ATPP_AndroidTX2ICollectiveSoldier>
+          <ATPP_AndroidTX2CollectiveSoldier>1</ATPP_AndroidTX2CollectiveSoldier>
+          <ATPP_AndroidTX3ICollectiveSoldier>2</ATPP_AndroidTX3ICollectiveSoldier>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
