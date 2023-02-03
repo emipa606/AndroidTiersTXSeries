@@ -1,6 +1,9 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using HarmonyLib;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace AndroidTiersTXSeries;
@@ -8,9 +11,154 @@ namespace AndroidTiersTXSeries;
 [StaticConstructorOnStartup]
 public static class AndroidTiersTXSeries
 {
+    private static readonly List<HeadTypeDef> HeadsWithBlueEyes;
+    private static readonly List<HeadTypeDef> HeadsWithRedEyes;
+    private static readonly List<HeadTypeDef> AllGlowingHeads;
+
+    private static readonly Dictionary<Pair<string, Color>, Graphic> EyeGlowEffectCache =
+        new Dictionary<Pair<string, Color>, Graphic>();
+
     static AndroidTiersTXSeries()
     {
         new Harmony("Mlie.AndroidTiersTXSeries").PatchAll(Assembly.GetExecutingAssembly());
+        HeadsWithBlueEyes = new List<HeadTypeDef>
+        {
+            AndroidTiersTXSeriesHeads_DefOf.TX3_Female_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX3_Male_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX3_Female_Average_Hurted2,
+            AndroidTiersTXSeriesHeads_DefOf.TX3_Male_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX3I_Female_Average_Normal,
+            AndroidTiersTXSeriesHeads_DefOf.TX3I_Male_Average_Normal,
+            AndroidTiersTXSeriesHeads_DefOf.TX4_Female_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX4_Male_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX4_Female_Average_Hurted2,
+            AndroidTiersTXSeriesHeads_DefOf.TX4_Male_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX4I_Female_Average_Normal,
+            AndroidTiersTXSeriesHeads_DefOf.TX4I_Male_Average_Normal
+        };
+
+        HeadsWithRedEyes = new List<HeadTypeDef>
+        {
+            AndroidTiersTXSeriesHeads_DefOf.TX2K_Female_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX2K_Male_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX2K_Female_Average_Hurted2,
+            AndroidTiersTXSeriesHeads_DefOf.TX2K_Male_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX2KI_Female_Average_Normal,
+            AndroidTiersTXSeriesHeads_DefOf.TX2KI_Male_Average_Normal
+        };
+
+        var headsWithYellowEyes = new List<HeadTypeDef>
+        {
+            AndroidTiersTXSeriesHeads_DefOf.TX2_Female_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX2_Male_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX2_Female_Average_Hurted2,
+            AndroidTiersTXSeriesHeads_DefOf.TX2_Male_Average_Hurted,
+            AndroidTiersTXSeriesHeads_DefOf.TX2I_Female_Average_Normal,
+            AndroidTiersTXSeriesHeads_DefOf.TX2I_Male_Average_Normal
+        };
+
+        AllGlowingHeads = HeadsWithBlueEyes.Concat(HeadsWithRedEyes).Concat(headsWithYellowEyes).ToList();
+    }
+
+    private static Graphic getEyeGlowEffect(Color color, string gender, int type, int front)
+    {
+        var key = new Pair<string, Color>(type + gender + front, color);
+        if (EyeGlowEffectCache.TryGetValue(key, out var value))
+        {
+            return value;
+        }
+
+        if (front == 1)
+        {
+            EyeGlowEffectCache[key] =
+                GraphicDatabase.Get<Graphic_Single>(
+                    (gender == "M" ? "Things/Misc/Androids/Effects/Front" : "Things/Misc/Androids/Effects/FFront") +
+                    type, ShaderDatabase.MoteGlow, Vector2.one, color);
+            return EyeGlowEffectCache[key];
+        }
+
+        EyeGlowEffectCache[key] =
+            GraphicDatabase.Get<Graphic_Single>(
+                (gender == "M" ? "Things/Misc/Androids/Effects/Side" : "Things/Misc/Androids/Effects/FSide") + type,
+                ShaderDatabase.MoteGlow, Vector2.one, color);
+        return EyeGlowEffectCache[key];
+    }
+
+    public static void DrawEyes(PawnRenderFlags renderFlags, Pawn pawn, float angle, Vector3 rootLoc, Rot4 bodyFacing,
+        Rot4 headFacing)
+    {
+        if (pawn == null || !pawn.def.defName.StartsWith("ATPP_"))
+        {
+            return;
+        }
+
+        if (pawn.Dead || renderFlags.FlagSet(PawnRenderFlags.HeadStump))
+        {
+            return;
+        }
+
+        if (headFacing == Rot4.North)
+        {
+            return;
+        }
+
+        if (!AllGlowingHeads.Contains(pawn.story.headType))
+        {
+            return;
+        }
+
+        var portraitMode = renderFlags.FlagSet(PawnRenderFlags.Portrait);
+
+        if (portraitMode && pawn.jobs?.curDriver?.asleep == true)
+        {
+            return;
+        }
+
+        var quaternion = Quaternion.AngleAxis(angle, Vector3.up);
+        var type = 1;
+        if (pawn.story.headType.defName.Contains("Hurted"))
+        {
+            type = 2;
+        }
+
+        var color = new Color(0.945f, 0.76862f, 0.05882f);
+        if (HeadsWithBlueEyes.Contains(pawn.story.headType))
+        {
+            color = new Color(0f, 0.972549f, 0.972549f);
+            type = 3;
+        }
+
+        if (HeadsWithRedEyes.Contains(pawn.story.headType) &&
+            (pawn.Drafted || pawn.Faction?.HostileTo(Faction.OfPlayer) == true))
+        {
+            color = new Color(0.75f, 0f, 0f, 1f);
+        }
+
+        var a = rootLoc;
+        if (bodyFacing != Rot4.North)
+        {
+            a.y += 0.0281250011f;
+            rootLoc.y += 0.0234375f;
+        }
+        else
+        {
+            a.y += 0.0234375f;
+            rootLoc.y += 0.0281250011f;
+        }
+
+        var b = quaternion * pawn.Drawer.renderer.BaseHeadOffsetAt(headFacing);
+        var loc = a + b + new Vector3(0f, 0.01f, 0f);
+        var mesh = MeshPool.humanlikeHeadSet.MeshAt(headFacing);
+        var gender = "M";
+        if (pawn.story.bodyType.defName.Contains("Female"))
+        {
+            gender = "F";
+        }
+
+        GenDraw.DrawMeshNowOrLater(mesh, loc, quaternion,
+            headFacing.IsHorizontal
+                ? getEyeGlowEffect(color, gender, type, 0).MatSingle
+                : getEyeGlowEffect(color, gender, type, 1).MatSingle, true);
     }
 
     public static void UpdatePawnGraphics(ref Pawn pawn)
