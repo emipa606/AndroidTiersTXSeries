@@ -6,6 +6,7 @@ Update of aRandomKiwi, CrackaJacks mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2010528561
 
 - Not updated the QEE patch yet, working on it
+- Also not included yet are the blank slate models, working on that as well
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 
@@ -21,18 +22,6 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2010528561
 **WORKS WITH SAVES - REQUIRES Android Tiers mod**
   
 Add a new serie of androids designed for infiltration missions, their slightly modified exoskeleton are covered with rubber skin / living tissues which prevent them to rust, have a better social impact and to be EMP/solar flare proof, they are however more flammable.
-
-![Image](https://i.imgur.com/Dzmzkg6.gif)
-
-
-http://ko-fi.com/arandomkiwi]![Image](https://i.imgur.com/wj2Hdwq.png)
-
-
-![Image](https://i.imgur.com/A63g837.jpg)
-
-
-![Image](https://i.imgur.com/h1louU4.jpg)
-
 
 ![Image](https://i.imgur.com/fMByeKQ.jpg)
 
@@ -67,13 +56,6 @@ Note 2) If you want to directly spawn an TX frame from devtools spawn an "Inacti
 
 
 1.0.4
-
-# Enjoy my mods and like me to continue updating ? 
-Please consider buying me a kiwi on Ko-Fi or [u]at least put a like[/u] :) 
-
-
-http://ko-fi.com/arandomkiwi]![Image](https://i.imgur.com/q1Uvqu1.png)
-
 	
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
@@ -87,3 +69,4 @@ http://ko-fi.com/arandomkiwi]![Image](https://i.imgur.com/q1Uvqu1.png)
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2927491015]Last updated 2023-02-03

@@ -1,4 +1,7 @@
 # Changelog for AndroidTiersTXSeries
 
+1.4.1 - Fixed bodygraphics based on damage. Clothes should no longer cause graphic glitches when worn by damaged TX
+
+
 1.4.0 - First publish
 

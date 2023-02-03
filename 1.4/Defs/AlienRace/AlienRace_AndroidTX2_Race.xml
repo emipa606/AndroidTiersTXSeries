@@ -11,9 +11,9 @@
         <alienPartGenerator>
           <bodyTypes Inherit="False">
             <li>Male</li>
-            <li>Female</li>
             <li>ATPP_BodyTypeMaleHurted12TX</li>
             <li>ATPP_BodyTypeMaleHurted22TX</li>
+            <li>Female</li>
             <li>ATPP_BodyTypeFemaleHurted12TX</li>
             <li>ATPP_BodyTypeFemaleHurted22TX</li>
           </bodyTypes>
@@ -46,7 +46,10 @@
       </generalSettings>
       <graphicPaths Inherit="False">
         <body>Things/Misc/Androids/Models/TX2/body/</body>
-        <head>Things/Misc/Androids/Models/TX2/head/</head>
+        <head>
+          <path>Things/Misc/Androids/Models/TX2/head/</path>
+          <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
+        </head>
         <skinShader>Cutout</skinShader>
       </graphicPaths>
       <thoughtSettings>
