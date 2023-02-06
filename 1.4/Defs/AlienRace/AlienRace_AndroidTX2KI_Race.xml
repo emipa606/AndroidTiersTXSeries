@@ -53,6 +53,7 @@
         </cannotReceiveThoughts>
       </thoughtSettings>
     </alienRace>
+    <uiIconPath>Things/Misc/Androids/Models/TX2KI/UI</uiIconPath>
     <statBases>
       <MarketValue>5500</MarketValue>
       <MoveSpeed>4.50</MoveSpeed>
@@ -76,6 +77,7 @@
       <MedicalTendQuality>0.6</MedicalTendQuality>
       <MedicalSurgerySuccessChance>0.8</MedicalSurgerySuccessChance>
       <Mass>150.2</Mass>
+      <ATR_MaintenanceRetention>1</ATR_MaintenanceRetention>
     </statBases>
     <tools>
       <li>

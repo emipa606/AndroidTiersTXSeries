@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef Abstract="true" Name="ATPP_BaseCreateAndroid">
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <unfinishedThingDef>ATR_UnfinishedAndroid</unfinishedThingDef>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Repair</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workSpeedStat>ATR_MechanicalOperationSpeed</workSpeedStat>
+    <recipeUsers>
+      <li>ATR_MechanicalAssemblyPod</li>
+    </recipeUsers>
+  </RecipeDef>
+</Defs>

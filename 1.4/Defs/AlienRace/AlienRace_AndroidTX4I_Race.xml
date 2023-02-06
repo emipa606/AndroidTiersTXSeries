@@ -51,6 +51,7 @@
         </cannotReceiveThoughts>
       </thoughtSettings>
     </alienRace>
+    <uiIconPath>Things/Misc/Androids/Models/TX4I/UI</uiIconPath>
     <statBases>
       <MarketValue>7000</MarketValue>
       <MoveSpeed>7.20</MoveSpeed>
@@ -72,6 +73,7 @@
       <ButcheryFleshEfficiency>0.8</ButcheryFleshEfficiency>
       <MedicalSurgerySuccessChance>1.2</MedicalSurgerySuccessChance>
       <Mass>85</Mass>
+      <ATR_MaintenanceRetention>1.6</ATR_MaintenanceRetention>
     </statBases>
     <tools>
       <li>

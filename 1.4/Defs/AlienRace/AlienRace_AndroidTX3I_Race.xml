@@ -51,6 +51,7 @@
         </cannotReceiveThoughts>
       </thoughtSettings>
     </alienRace>
+    <uiIconPath>Things/Misc/Androids/Models/TX3I/UI</uiIconPath>
     <statBases>
       <MarketValue>5800</MarketValue>
       <MoveSpeed>5.00</MoveSpeed>
@@ -71,6 +72,7 @@
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <Mass>105</Mass>
       <MedicalSurgerySuccessChance>1</MedicalSurgerySuccessChance>
+      <ATR_MaintenanceRetention>1.4</ATR_MaintenanceRetention>
     </statBases>
     <tools>
       <li>

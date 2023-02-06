@@ -69,4 +69,4 @@ Note 2) If you want to directly spawn an TX frame from devtools spawn an "Inacti
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2927491015]Last updated 2023-02-03
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2927491015]Last updated 2023-02-06

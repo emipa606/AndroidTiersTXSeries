@@ -1,5 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/RecipeDef/recipeUsers[li="ATR_Tier2Android"]</xpath>
+    <value>
+      <li>ATPP_Android2TX</li>
+      <li>ATPP_Android2ITX</li>
+      <li>ATPP_Android2KTX</li>
+      <li>ATPP_Android2KITX</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/RecipeDef/recipeUsers[li="ATR_Tier3Android"]</xpath>
+    <value>
+      <li>ATPP_Android3TX</li>
+      <li>ATPP_Android3ITX</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/RecipeDef/recipeUsers[li="ATR_Tier4Android"]</xpath>
+    <value>
+      <li>ATPP_Android4TX</li>
+      <li>ATPP_Android4ITX</li>
+    </value>
+  </Operation>
   <Operation Class="PatchOperationSequence">
     <!-- <success>Always</success> -->
     <operations>

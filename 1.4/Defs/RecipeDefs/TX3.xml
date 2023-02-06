@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <RecipeDef Name="ATPP_BaseCreateTX3" Abstract="True">
+  <RecipeDef ParentName="ATPP_BaseCreateAndroid">
+    <defName>ATPP_CreateTX3Android</defName>
+    <label>Create TX3 Android</label>
     <description>Create a TX3 Android.</description>
     <jobString>Making Android</jobString>
     <allowMixingIngredients>false</allowMixingIngredients>
@@ -57,31 +59,10 @@
         <count>6</count>
       </li>
     </ingredients>
-    <researchPrerequisite>ATR_T3Androids</researchPrerequisite>
-    <workAmount>28500</workAmount>
-    <unfinishedThingDef>ATR_UnfinishedAndroid</unfinishedThingDef>
-    <workSkill>Crafting</workSkill>
-    <effectWorking>Repair</effectWorking>
-    <soundWorking>Recipe_Machining</soundWorking>
-    <workSpeedStat>ATR_MechanicalOperationSpeed</workSpeedStat>
-    <recipeUsers>
-      <li>ATR_MechanicalAssemblyPod</li>
-    </recipeUsers>
-  </RecipeDef>
-  <RecipeDef ParentName="ATPP_BaseCreateTX3">
-    <defName>ATPP_CreateTX3Android</defName>
-    <label>Create TX3 Android</label>
     <products>
       <ATPP_TX3AndroidGeneratorAI>1</ATPP_TX3AndroidGeneratorAI>
     </products>
+    <researchPrerequisite>ATR_T3Androids</researchPrerequisite>
+    <workAmount>28500</workAmount>
   </RecipeDef>
-  <ThingDef ParentName="ATR_GeneratorBase">
-    <defName>ATPP_TX3AndroidGeneratorAI</defName>
-    <label>TX3 Android</label>
-    <comps>
-      <li Class="ATReforged.CompProperties_GenericSpawner">
-        <pawnKind>ATPP_Android3TXKind</pawnKind>
-      </li>
-    </comps>
-  </ThingDef>
 </Defs>

@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <RecipeDef Name="ATPP_BaseCreateTX2KI" Abstract="True">
+  <RecipeDef ParentName="ATPP_BaseCreateAndroid">
+    <defName>ATPP_CreateTX2KIAndroid</defName>
+    <label>Create TX2KI Android</label>
     <description>Create a blank TX2KI Android from Plasteel.</description>
     <jobString>Making Android</jobString>
-    <allowMixingIngredients>false</allowMixingIngredients>
     <skillRequirements>
       <Crafting>8</Crafting>
     </skillRequirements>
@@ -41,6 +42,9 @@
         <count>2</count>
       </li>
     </ingredients>
+    <products>
+      <ATPP_TX2KIAndroidGeneratorAI>1</ATPP_TX2KIAndroidGeneratorAI>
+    </products>
     <researchPrerequisite>ATR_T2Androids</researchPrerequisite>
     <workAmount>27500</workAmount>
     <unfinishedThingDef>ATR_UnfinishedAndroid</unfinishedThingDef>
@@ -52,20 +56,4 @@
       <li>ATR_MechanicalAssemblyPod</li>
     </recipeUsers>
   </RecipeDef>
-  <RecipeDef ParentName="ATPP_BaseCreateTX2KI">
-    <defName>ATPP_CreateTX2KIAndroid</defName>
-    <label>Create TX2KI Android</label>
-    <products>
-      <ATPP_TX2KIAndroidGeneratorAI>1</ATPP_TX2KIAndroidGeneratorAI>
-    </products>
-  </RecipeDef>
-  <ThingDef ParentName="ATR_GeneratorBase">
-    <defName>ATPP_TX2KIAndroidGeneratorAI</defName>
-    <label>TX2KI Android</label>
-    <comps>
-      <li Class="ATReforged.CompProperties_GenericSpawner">
-        <pawnKind>ATPP_Android2KITXKind</pawnKind>
-      </li>
-    </comps>
-  </ThingDef>
 </Defs>
