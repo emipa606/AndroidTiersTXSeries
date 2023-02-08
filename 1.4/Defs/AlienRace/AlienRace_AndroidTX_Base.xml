@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMechanicalPawn" Name="TXWithHairBase" Abstract="True">
+    <alienRace>
+      <styleSettings Inherit="False">
+        <li>
+          <key>HairDef</key>
+          <value>
+            <styleTagsOverride>
+              <li>Urban</li>
+              <li>Punk</li>
+            </styleTagsOverride>
+          </value>
+        </li>
+        <li>
+          <key>BeardDef</key>
+          <value>
+            <styleTagsOverride>
+              <li>NoBeard</li>
+              <li>BeardUrban</li>
+              <li>BeardPunk</li>
+            </styleTagsOverride>
+          </value>
+        </li>
+        <li>
+          <key>TattooDef</key>
+          <value>
+            <styleTagsOverride>
+              <li>NoTattoo</li>
+              <li>TattooFacePunk</li>
+              <li>TattooBodyPunk</li>
+            </styleTagsOverride>
+          </value>
+        </li>
+      </styleSettings>
+    </alienRace>
+  </AlienRace.ThingDef_AlienRace>
+</Defs>

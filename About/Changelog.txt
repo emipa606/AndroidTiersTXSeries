@@ -1,5 +1,8 @@
 # Changelog for AndroidTiersTXSeries
 
+1.4.4 - TX-models with skin can now have hair, beards and tatoos. These are removed when damaged but gets restored when healed again.
+
+
 1.4.3 - All TX droids should have the same surgery options as their normal T counterparts. Added UI icons for recipes and Android Tiers settings
 
 

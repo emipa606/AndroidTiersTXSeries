@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AlienRace.ThingDef_AlienRace ParentName="ATR_BaseMechanicalPawn">
+  <AlienRace.ThingDef_AlienRace ParentName="TXWithHairBase">
     <defName>ATPP_Android2KTX</defName>
     <label>TX2K Android</label>
     <description>A prototype android designed to be used exclusively on the battlefield as heavy infantry, very resistant and inflicts severe melee damage, however quite slow due to its armor and he is unable to perform advanced tasks because of its limited processor essentially optimized for combat.</description>

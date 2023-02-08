@@ -14,6 +14,7 @@ public static class AndroidTiersTXSeries
     private static readonly List<HeadTypeDef> HeadsWithBlueEyes;
     private static readonly List<HeadTypeDef> HeadsWithRedEyes;
     private static readonly List<HeadTypeDef> AllGlowingHeads;
+    public static TXBodyStuffGameComponent TXBodyStuff;
 
     private static readonly Dictionary<Pair<string, Color>, Graphic> EyeGlowEffectCache =
         new Dictionary<Pair<string, Color>, Graphic>();
@@ -304,13 +305,58 @@ public static class AndroidTiersTXSeries
 
         if (bodyToSet == pawn.story.bodyType && headToSet == pawn.story.headType)
         {
+            if (type != 0)
+            {
+                return;
+            }
+
+            TXBodyStuff.OriginalHairs[pawn.ThingID] = pawn.story?.hairDef;
+            TXBodyStuff.OriginalBeards[pawn.ThingID] = pawn.style?.beardDef;
+            TXBodyStuff.OriginalBodyTattoos[pawn.ThingID] = pawn.style?.BodyTattoo;
+            TXBodyStuff.OriginalFaceTattoos[pawn.ThingID] = pawn.style?.FaceTattoo;
             return;
         }
 
+
         pawn.story.bodyType = bodyToSet;
         pawn.story.headType = headToSet;
-        pawn.Drawer.renderer.graphics.ResolveAllGraphics();
+
+        switch (type)
+        {
+            case 0:
+                if (TXBodyStuff.OriginalHairs.TryGetValue(pawn.ThingID, out var hair))
+                {
+                    pawn.story.hairDef = hair;
+                }
+
+                if (TXBodyStuff.OriginalBeards.TryGetValue(pawn.ThingID, out var beard))
+                {
+                    pawn.style.beardDef = beard;
+                }
+
+                if (TXBodyStuff.OriginalBodyTattoos.TryGetValue(pawn.ThingID, out var bodytatoo))
+                {
+                    pawn.style.BodyTattoo = bodytatoo;
+                }
+
+                if (TXBodyStuff.OriginalFaceTattoos.TryGetValue(pawn.ThingID, out var facetatoo))
+                {
+                    pawn.style.FaceTattoo = facetatoo;
+                }
+
+                break;
+            default:
+                pawn.story.hairDef = HairDefOf.Bald;
+                pawn.style.beardDef = BeardDefOf.NoBeard;
+                pawn.style.BodyTattoo = TattooDefOf.NoTattoo_Body;
+                pawn.style.FaceTattoo = TattooDefOf.NoTattoo_Face;
+                break;
+        }
+
         pawn.Drawer.renderer.graphics.ClearCache();
+        pawn.Drawer.renderer.graphics.CalculateHairMats();
+        pawn.Drawer.renderer.graphics.ResolveAllGraphics();
         PortraitsCache.SetDirty(pawn);
+        pawn.Drawer.renderer.graphics.SetAllGraphicsDirty();
     }
 }

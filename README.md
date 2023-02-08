@@ -7,6 +7,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2010528561
 
 - Not updated the QEE patch yet, working on it
 - Also not included yet are the blank slate models, working on that as well
+- To use this with 1.3 and older you need https://steamcommunity.com/sharedfiles/filedetails/?id=1386412863]Android Tiers instead
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 
@@ -19,7 +20,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2010528561
 ![Image](https://i.imgur.com/NosON0p.jpg)
 
 
-**WORKS WITH SAVES - REQUIRES Android Tiers mod**
+**WORKS WITH SAVES - [strike]REQUIRES Android Tiers mod[/strike] only requires Android Tiers for 1.3 and earlier**
   
 Add a new serie of androids designed for infiltration missions, their slightly modified exoskeleton are covered with rubber skin / living tissues which prevent them to rust, have a better social impact and to be EMP/solar flare proof, they are however more flammable.
 
@@ -69,4 +70,4 @@ Note 2) If you want to directly spawn an TX frame from devtools spawn an "Inacti
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2927491015]Last updated 2023-02-06
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2927491015]Last updated 2023-02-09
