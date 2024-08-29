@@ -25,15 +25,20 @@
 Update of aRandomKiwi, CrackaJacks mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2010528561
 
+[b]I will not be able to update this. Mods depending on the HAR framework has become to much work for me to fix each update.[/b]
+
 - Not updated the QEE patch yet, working on it
 - Also not included yet are the blank slate models, working on that as well
 - To use this with 1.3 and older you need [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1386412863]Android Tiers[/url] instead
+- TX-models with skin can now have hair, beards and tatoos. These are removed when damaged but gets restored when healed again.
 
-[img]https://i.imgur.com/pufA0kM.png[/img]
+If you use [url=https://steamcommunity.com/workshop/filedetails/?id=2974546748]MH: Android Tiers[/url] please use [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3012936387]Android tiers - TX Series (Squid Edition)[/url] instead
+
+[img]https://i.imgur.com/3npT60J.png[/img]
 
 [table]
     [tr]
-        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
         [td][url=https://github.com/emipa606/AndroidTiersTXSeries][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
     [/tr]
     [tr]
@@ -81,10 +86,13 @@ Note 2) If you want to directly spawn an TX frame from devtools spawn an "Inacti
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
-[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
 [*] For best support, please use the Discord-channel for error-reporting.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
+[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
 [/list]
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2927491015]Last updated 2023-02-09[/url]</description>
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2927491015][img]https://img.shields.io/github/v/release/emipa606/AndroidTiersTXSeries?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url]</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.4.5</modVersion>
 </ModMetaData>

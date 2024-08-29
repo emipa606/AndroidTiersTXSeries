@@ -1,5 +1,8 @@
 # Changelog for AndroidTiersTXSeries
 
+1.4.5 - Last update, added end-of-life message
+
+
 1.4.4 - TX-models with skin can now have hair, beards and tatoos. These are removed when damaged but gets restored when healed again.
 
 

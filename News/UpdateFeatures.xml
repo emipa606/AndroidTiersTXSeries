@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="AndroidTiersTXSeries_UpdateFeatureBase">
+		<modNameReadable>AndroidTiersTXSeries</modNameReadable>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2927491015</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="AndroidTiersTXSeries_UpdateFeatureBase">
+		<defName>AndroidTiersTXSeries_1_4_4</defName>
+		<assemblyVersion>1.4.4</assemblyVersion>
+		<content>This mod will not be further updated.</content>
+	</HugsLib.UpdateFeatureDef>
+</Defs>
+
